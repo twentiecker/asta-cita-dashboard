@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Asta Cita Indonesia</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Asta Cita</h2>
+      <ul>
+        <li onclick="selectAsta(1)">1. Ideologi, Demokrasi, HAM</li>
+        <li onclick="selectAsta(2)">2. Pertahanan & Swasembada</li>
+        <li onclick="selectAsta(3)">3. Lapangan Kerja & Infrastruktur</li>
+        <li onclick="selectAsta(4)">4. SDM, Pendidikan, Kesehatan</li>
+        <li onclick="selectAsta(5)">5. Hilirisasi & Industrialisasi</li>
+        <li onclick="selectAsta(6)">6. Pembangunan Desa</li>
+        <li onclick="selectAsta(7)">7. Reformasi Politik & Hukum</li>
+        <li onclick="selectAsta(8)">8. Lingkungan & Toleransi</li>
+      </ul>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+      <header>📊 Dashboard Asta Cita Indonesia</header>
+
+      <div id="cards" class="cards"></div>
+      <div class="chart-container">
+        <div style="display: flex">
+          <h4>Time Series Chart</h4>
+          <button class="ai-btn" onclick="openModal('Line Chart')">
+            AI Assistant
+          </button>
+        </div>
+        <canvas id="lineChart"></canvas>
+      </div>
+
+      <div class="chart-container">
+        <h4>Comparison Chart</h4>
+        <canvas id="barChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <h4>Summary Table</h4>
+        <table id="dataTable"></table>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <h3>AI Analysis</h3>
+        <p id="analysisText">Analisis otomatis akan tampil di sini...</p>
+        <button onclick="closeModal()">Tutup</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
